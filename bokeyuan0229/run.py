@@ -26,3 +26,4 @@ if __name__ == '__main__':
     runner.run(test_suite)
     ss = SendMail()
     ss.sendmail()
+    print("yanzhengshifoushi zuixindaima")
