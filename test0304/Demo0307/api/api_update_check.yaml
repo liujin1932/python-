@@ -1,0 +1,51 @@
+name: /cart/updateCheck
+skip: 此功能已去除，skip掉
+request:
+    data:
+        api_version: 8.30.2
+        app_client_id: '1'
+        channel: App Store
+        countryCode: CN
+        device_id: f2e0738b6f33347257ed373b5dcb61897f0882c9
+        device_model: iPhone8,2
+        device_name: iPhone 6s Plus
+        is_filter: '0'
+        is_load: '1'
+        languageCode: zh
+        latitude: '31.15454'
+        localeIdentifier: zh_CN
+        longitude: '121.571177'
+        os_version: 12.1.4
+        pageid: cartPage
+        product: '{"id":"5e4506d610abf10ebd1d1b79","is_check":1}'
+        seqid: '591807427'
+        sign: 284c9e981cf186b54b5db4a5d49639d3
+        station_id: 5ca1ea82d033a1925b8b4582
+        uid: 5d2ad49a418dce0c1227b16c
+    headers:
+        Content-Type: application/x-www-form-urlencoded
+        Time: 1583654785114,f239e816321e4ce8c0c089d8a75fb203
+        User-Agent: neighborhood/8.30.2 (iPhone; iOS 12.1.4; Scale/3.00)
+        Cookie: ${get_Cookie()}
+    method: POST
+    url: /cart/updateCheck
+validate:
+-   eq:
+    - status_code
+    - 200
+-   eq:
+    - headers.Content-Type
+    - application/json; charset=utf-8
+-   eq:
+    - content.success
+    - true
+-   eq:
+    - content.code
+    - 0
+-   eq:
+    - content.msg
+    - success
+setup_hooks:
+    - ${hook_log(--------测试用例 1 开始前的准备-------)}
+teardown_hooks:
+    - ${hook_log(-------测试用例 1 结束--------)}

@@ -1,0 +1,48 @@
+name: 添加购物车
+times: 3
+request:
+    data:
+        api_version: 8.30.2
+        app_client_id: '1'
+        channel: App Store
+        countryCode: CN
+        device_id: f2e0738b6f33347257ed373b5dcb61897f0882c9
+        device_model: iPhone8,2
+        device_name: iPhone 6s Plus
+        is_filter: '1'
+        is_load: '0'
+        languageCode: zh
+        latitude: '31.15454'
+        localeIdentifier: zh_CN
+        longitude: '121.571177'
+        os_version: 12.1.4
+        pageid: categoryPage
+        products: '[{"sizes":[],"id":"5d8de3b6b0055a0b5b0b3850","count":1,"mandatory_count":0,"mandatory_check":1}]'
+        seqid: '591807401'
+        sign: 83aa28312ca809eecbfff0fad318ccfd
+        station_id: 5ca1ea82d033a1925b8b4582
+        uid: 5d2ad49a418dce0c1227b16c
+    headers:
+        Content-Type: application/x-www-form-urlencoded
+        Time: 1583650485395,f168e9d7fa81b95dccd34a8312215094
+        User-Agent: neighborhood/8.30.2 (iPhone; iOS 12.1.4; Scale/3.00)
+        Cookie: ${get_Cookie()}
+    method: POST
+    url: /cart/add
+    verify: false
+validate:
+- eq:
+    - status_code
+    - 200
+- eq:
+    - headers.Content-Type
+    - application/json; charset=utf-8
+- eq:
+    - content.success
+    - true
+- eq:
+    - content.code
+    - 0
+- eq:
+    - content.msg
+    - success

@@ -1,0 +1,50 @@
+
+
+name: /order/getReserveTime
+request:
+    data:
+        address_id: 5d2adaf0c7316f28cba0154a
+        api_version: 8.30.2
+        app_client_id: '1'
+        channel: App Store
+        countryCode: CN
+        device_id: f2e0738b6f33347257ed373b5dcb61897f0882c9
+        device_model: iPhone8,2
+        device_name: iPhone 6s Plus
+        is_clean: '0'
+        languageCode: zh
+        latitude: '31.15454'
+        localeIdentifier: zh_CN
+        longitude: '121.571177'
+        os_version: 12.1.4
+        products: '[{"is_booking":0,"id":"5e4506d610abf10ebd1d1b79","sizes":[],"count":1,"price":"12.80","type":1},{"is_booking":0,"id":"5994168f916edf521126864f","sizes":[],"count":1,"price":"18.80","type":1}]'
+        seqid: '591807427'
+        sign: 11c2fd28a3af57ee7e99eab1a02f8dfe
+        station_id: 5ca1ea82d033a1925b8b4582
+        uid: 5d2ad49a418dce0c1227b16c
+    headers:
+        Content-Type: application/x-www-form-urlencoded
+        Time: 1583654820232,7ab034d92ffdb06564e673a7f384a582
+        Cookie: ${get_Cookie()}
+    method: POST
+    url: /order/getReserveTime
+validate:
+-  eq:
+    - status_code
+    - 200
+-  eq:
+    - headers.Content-Type
+    - application/json; charset=utf-8
+-  eq:
+    - content.success
+    - true
+-  eq:
+    - content.code
+    - 0
+-  eq:
+    - content.msg
+    - success
+setup_hooks:
+    - ${hook_log(--------测试用例 2 开始前的准备-------)}
+teardown_hooks:
+    - ${hook_log(-------测试用例 2 结束--------)}

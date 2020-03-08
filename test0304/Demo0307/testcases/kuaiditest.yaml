@@ -1,0 +1,6 @@
+- config:
+    name: "kuaidi"
+
+- test:
+    name: "查询快递"
+    api: api/kuaidi.yaml

@@ -1,0 +1,9 @@
+config:
+    name: "用例集"
+
+testcases:
+    "查询快递":
+        testcase: testcases/kuaiditest.yaml
+
+    "查看商品详情-添加购物车":
+        testcase: testcases/test_get_product_detail.yaml

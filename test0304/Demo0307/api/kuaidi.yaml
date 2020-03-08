@@ -1,0 +1,24 @@
+name: test kuaidi100 one
+request:
+    url: http://www.kuaidi100.com/query
+    method: GET
+    params:
+        type: huitongkuaidi
+        postid: 350757858666
+validate:
+    - eq: ["status_code",200]
+
+#config:
+#    name: test kuaidi100 api
+#    request:
+#        base_url: http://www.kuaidi100.com
+#
+#
+#name: test kuaidi100 one
+#request:
+#    url: /query
+#    method: GET
+#    params:
+#        type: huitongkuaidi
+#        postid: 350757858666
+

@@ -1,0 +1,26 @@
+name: 获取商品详情信息
+request:
+    url: /productApi/productDetail
+    headers:
+        Cookie: ${get_Cookie()}
+    method: GET
+    params:
+        api_version: 8.30.2
+        app_client_id: 1
+        channel: App%20Store
+        countryCode: CN
+        device_id: f2e0738b6f33347257ed373b5dcb61897f0882c9
+        device_model: iPhone8%2C2
+        device_name: iPhone%206s%20Plus
+        id: 5e4506d610abf10ebd1d1b79
+        languageCode: zh&latitude=31.15454
+        localeIdentifier: zh_CN&longitude=121.571177
+        os_version: 12.1.4
+        pageid: productDetailPage
+        seqid: 591807456
+        sign: 7178e8818ccc52d40607b8d09612ca0e
+        station_id: 5ca1ea82d033a1925b8b4582
+        uid: 5d2ad49a418dce0c1227b16c
+    verify: false
+validate:
+    - eq: ["status_code",200]

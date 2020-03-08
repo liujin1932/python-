@@ -1,0 +1,31 @@
+- config:
+    name: "商品详情quanju"
+#    base_url: ${get_base_url()}
+#    base_url: ${environ(host)}CW
+    base_url: ${ENV(host)}
+    Cookie: ${get_Cookie()}
+    setup_hooks:
+        - ${hook_up()}
+    teardown_hooks:
+        - ${hook_down()}
+
+- test:
+    name: "商品详情"
+    api: api/api_get_product_detail.yaml
+
+- test:
+    name: "添加购物车"
+    api: api/api_add_cart.yaml
+
+- test:
+    name: "添加小葱"
+    api: api/api_add_onion.yaml
+    output:
+        - msg
+- test:
+    name: "购物车勾选商品"
+    api: api/api_update_check.yaml
+
+- test:
+    name: "获取下单时间"
+    api: api/api_get_reserve_time.yaml

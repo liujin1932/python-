@@ -1,0 +1,8 @@
+[32m[47mINFO    [0m [32mHttpRunner version: 2.5.7[0m
+[32m[47mINFO    [0m [32mLoading environment variables from D:\Users\Administrator\Pycharm\test0304\Demo0307\.env[0m
+[32m[47mINFO    [0m [32mStart to run testcase: kuaidi[0m
+[32m[47mINFO    [0m [32mGET http://www.kuaidi100.com/query[0m
+[32m[47mINFO    [0m [32mstatus_code: 200, response_time(ms): 20.0 ms, response_length: 212 bytes
+[0m
+[32m[47mINFO    [0m [32mStart to render Html report ...[0m
+[32m[47mINFO    [0m [32mGenerated Html report: D:\Users\Administrator\Pycharm\test0304\Demo0307\reports\20200308T115551.733321.html[0m
