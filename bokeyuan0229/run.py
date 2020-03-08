@@ -27,3 +27,5 @@ if __name__ == '__main__':
     ss = SendMail()
     ss.sendmail()
     print("yanzhengshifoushi zuixindaima")
+    print(12345)
+    
